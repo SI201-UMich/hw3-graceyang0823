@@ -3,7 +3,7 @@
 # Email: graceyng@umich.edu
 # Who or what you worked with on this homework (including generative AI like ChatGPT):
 # If you worked with generative AI also add a statement for how you used it.
-# e.g.:
+# e.g.: 
 # Asked ChatGPT hints for debugging and suggesting the general structure of the code
 # Did your use of GenAI on this assignment align with your goals and guidelines in 
 #    your Gen AI contract? If not, why?
@@ -35,6 +35,7 @@ class CouponDispenser:
         self.coupon_cards = coupon_cards
         self.customer_roster = []
         self.issued_indices = []
+
         
     def __str__(self):
         """
@@ -62,8 +63,20 @@ class CouponDispenser:
         Returns:
             str: message as described above
         """
-        # TODO: Implement per instructions
-        pass
+
+        if len(self.coupon_cards) == 0:
+            return "The box is empty."
+        
+        if name in self.customer_roster:
+            name_index = self.customer_roster.index(name)
+            coupon_name = self.coupon_cards[self.issued_indices[name_index]]
+            return "That name already has a coupon:" + coupon_name
+        
+        coupon_index = random.randrange(len(self.coupon_cards))
+        self.customer_roster.append(name)
+        self.issued_indices.append(coupon_index)
+        return self.coupon_cards[coupon_index]
+
 
     def distribute_session(self):
         """
@@ -401,5 +414,5 @@ def test():
 
 if __name__ == "__main__":
     main()
-    # test()
+    test()
 
