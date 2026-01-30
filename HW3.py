@@ -112,17 +112,8 @@ class CouponDispenser:
                     if name != "":
                         result = self.issue_coupon(name)
                         print(result)
-                        
+
             round_number += 1
-
-
-
-
-
-
-
-
-        
         
     def tally_distribution(self):
         """
@@ -139,8 +130,12 @@ class CouponDispenser:
         Returns:
             None
         """
-        # TODO: Implement per instructions
-        pass
+        if len(self.issued_indices) == 0:
+            print("Empty")
+            return
+        for i in range(len(self.coupon_cards)):
+            count = self.issued_indices.count(i)
+            print(f"{self.coupon_cards[i]} distribution count: {count}.")
 
 
 def main():
