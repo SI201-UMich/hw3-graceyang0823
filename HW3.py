@@ -1,12 +1,16 @@
 # Name: Grace Yang
 # Student ID: 1074 5911
 # Email: graceyng@umich.edu
-# Who or what you worked with on this homework (including generative AI like ChatGPT):
+# Who or what you worked with on this homework (including generative AI like ChatGPT): ChatGPT
 # If you worked with generative AI also add a statement for how you used it.
-# e.g.: 
-# Asked ChatGPT hints for debugging and suggesting the general structure of the code
+# I asked ChatGPT to help me identify errors in my code that were causing failures 
+# when I ran the tests. For example, for the tally_distribution function, ChatGPT told me that my
+# formatting in the last line was incorrect and explained how to correctly format it.    
 # Did your use of GenAI on this assignment align with your goals and guidelines in 
 #    your Gen AI contract? If not, why?
+# My use of AI on this assignment did align with my Gen AI contract, because as I outlined in my 
+# guidelines, I would use GenAI to help me solve any errors I encounter as a last result after 
+# trying to problem-solve independently first, which is what I did.
 
 import random
 import io
