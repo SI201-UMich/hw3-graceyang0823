@@ -139,13 +139,7 @@ class CouponDispenser:
 
 
 def main():
-    """
-    Driver function:
-      - Define the coupon_cards list (example coupons below)
-      - Create a CouponDispenser
-      - Start the interaction via distribute_session()
-      - After exit, call tally_distribution() to print the distribution in the terminal
-    """
+
     coupon_cards = [
         "10% off",
         "Free small coffee",
@@ -153,16 +147,14 @@ def main():
         "Free extra espresso shot",
     ]
 
-    # Uncomment the lines below as you implement each function.
-    # box = CouponDispenser(coupon_cards)
-    # box.distribute_session()
-    # box.tally_distribution()
-    pass
-
+    box = CouponDispenser(coupon_cards)
+    box.distribute_session()
+    box.tally_distribution()
 
 # -----------------------
 # Tests (about 3–4 per function)
 # -----------------------
+
 
 def _capture_session_output(box, inputs):
     """
